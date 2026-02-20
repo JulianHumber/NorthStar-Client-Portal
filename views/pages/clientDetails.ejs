@@ -1,0 +1,48 @@
+<div class="profile-container">
+    <header class="profile-header">
+        <h2>Client Profile</h2>
+        <a href="/clients" class="btn-secondary">← Back to Directory</a>
+    </header>
+
+    <div class="profile-card">
+        <div class="profile-section">
+            <h3>Identity Information</h3>
+            <div class="detail-row">
+                <span class="label">Full Name:</span>
+                <span class="value"><%= client.fullName %></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">System ID:</span>
+                <span class="value">#<%= client.id %></span>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h3>Contact Details</h3>
+            <div class="detail-row">
+                <span class="label">Email Address:</span>
+                <span class="value"><%= client.email %></span>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h3>Risk Assessment</h3>
+            <div class="detail-row">
+                <span class="label">Risk Category:</span>
+                <span class="value badge-<%= client.riskCategory.toLowerCase() %>">
+                    <%= client.riskCategory %>
+                </span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Registration Date:</span>
+                <span class="value"><%= client.createdDate %></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-actions">
+        <form action="/clients/delete/<%= client.id %>" method="POST" onsubmit="return confirm('Permanently delete this record?')">
+            <button type="submit" class="btn-danger">Delete Client Record</button>
+        </form>
+    </div>
+</div>

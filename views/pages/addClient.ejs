@@ -1,0 +1,17 @@
+<h2>Add The New Client</h2>
+<form action="/clients/add" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <label>Service:</label>
+    <input type="text" name="service" required>
+    <label>Risk Level:</label>
+    <select name="riskLevel" required>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+    <button type="submit">Add Client</button>
+</form>
+<a href="/clients">Back to Clients</a>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Josh Tony",
+    "email": "josh.tony@northstar.com",
+    "service": "Investment Planning",
+    "riskLevel": "Low"
+  },
+  {
+    "id": 2,
+    "name": "Rose Parker",
+    "email": "rose.parker@northstar.com",
+    "service": "Wealth Advising",
+    "riskLevel": "Medium"
+  },
+  {
+    "id": 3,
+    "name": "Sam Bosh",
+    "email": "sam.bosh@northstar.com",
+    "service": "Risk Control",
+    "riskLevel": "High"
+  }
+]

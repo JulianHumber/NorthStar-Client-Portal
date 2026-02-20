@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>The North Star Clients</h2>
+    <a href="/clients/add" class="btn btn-primary">Add New Client</a>
+</div>
+
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>The Name</th>
+            <th>The Email</th>
+            <th>Risk Category</th> <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% clients.forEach(client => { %>
+            <tr>
+                <td>
+                    <a href="/clients/details/<%= client.id %>"><%= client.name %></a>
+                </td>
+                <td><%= client.email %></td>
+                <td>
+                    <span class="badge <%= client.risk === 'High' ? 'bg-danger' : 'bg-success' %>">
+                        <%= client.risk %>
+                    </span>
+                </td>
+                <td>
+                    <a href="/clients/edit/<%= client.id %>" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="/clients/delete/<%= client.id %>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
